@@ -6,19 +6,22 @@ As of right now, the tool is written only in C++.
 I have intent to write it in Go in the future.
 
 The executables will be inside *bin* folder in the respective language's directory. 
-Source code can be found in the respective langauge directories as well.
+Source code can also be found in the respective langauge directories as well.
+### C++
 ```
-    cpp/
-      regex-cli.cpp
-      bin/
-        regex-cli-cpp
-```
-or
-```
+regex-cli/
     go/
       regex-cli.go
       bin/
         regex-cli-go
+```
+### Go
+```
+regex-cli/
+    cpp/
+      regex-cli.cpp
+      bin/
+        regex-cli-cpp
 ```
 
 ## Usage
@@ -35,4 +38,4 @@ or
 ```
     $ ./go/bin/regex-cli-go
 ```
-- The first time you run the program, you will be greeted by helpful instructions.
+- When you run the program as above (without any flags), you will be greeted by helpful instructions.
