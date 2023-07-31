@@ -131,9 +131,6 @@ void printHelp(string program) {
       << "#\tThe pattern is"
       << "\n\t\t./program_name matching_option case_insensitive input_from_file"
       << endl;
-  cout << "\n#\tThe case does not actually matter so long as the option is "
-          "spelled correctly"
-       << endl;
   cout << "\n1. Matching-Options" << endl;
   cout << "\twhole" << setw(40) << "implements regex_match" << endl;
   cout << "\tonce" << setw(42) << "implements regex_search" << endl;
@@ -145,6 +142,9 @@ void printHelp(string program) {
   cout << "\n3. Input From File?" << endl;
   cout << "\ty" << setw(51) << "later you specify a filename " << endl;
   cout << "\tn" << setw(50) << "later you type in the string" << endl;
+  cout << "\n#\tThe case does not actually matter so long as the option is "
+          "spelled correctly"
+       << endl;
   cout << "\nEXAMPLES" << endl;
   cout << "\t\t" << program << " whole ab?c{2} y n" << endl;
   cout << "\t\t" << program << " once ab?c{2} y n" << endl;
