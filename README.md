@@ -38,4 +38,4 @@ or
 ```
     $ ./go/bin/regex-cli-go
 ```
-- The first time you run the program, you will be greeted by helpful instructions.
+- When you run the program as above (without any flags), you will be greeted by helpful instructions.
