@@ -7,14 +7,6 @@ I have intent to write it in Go in the future.
 
 The executables will be inside *bin* folder in the respective language's directory. 
 Source code can also be found in the respective langauge directories as well.
-### Go
-```
-regex-cli/
-    cpp/
-      regex-cli.cpp
-      bin/
-        regex-cli-cpp
-```
 ### C++
 ```
 regex-cli/
@@ -22,6 +14,14 @@ regex-cli/
       regex-cli.go
       bin/
         regex-cli-go
+```
+### Go
+```
+regex-cli/
+    cpp/
+      regex-cli.cpp
+      bin/
+        regex-cli-cpp
 ```
 
 ## Usage
