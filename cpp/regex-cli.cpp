@@ -242,5 +242,5 @@ void multi_matching(regex pattern, string str, bool from_file, ifstream &file) {
     }
   }
 
-  cout << "\n#\t" << count << " matches found in given string!" << endl;
+  cout << "\n\t" << count << " matches found in given string!" << endl;
 }
