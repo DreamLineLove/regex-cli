@@ -6,15 +6,18 @@ As of right now, the tool is written only in C++.
 I have intent to write it in Go in the future.
 
 The executables will be inside *bin* folder in the respective language's directory. 
-Source code can be found in the respective langauge directories as well.
+Source code can also be found in the respective langauge directories as well.
+### Go
 ```
+regex-cli/
     cpp/
       regex-cli.cpp
       bin/
         regex-cli-cpp
 ```
-or
+### C++
 ```
+regex-cli/
     go/
       regex-cli.go
       bin/
