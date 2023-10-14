@@ -1,9 +1,9 @@
 # regex-cli
-A simple command line tool to analyze strings using regular expressions and return the number of matches found.
+A simple command line tool to analyze strings using regular expressions.
 
 ## Contents
 As of right now, the tool is written only in C++. 
-I have intent to write it in Go in the future.
+I intend to write it in Go in the future.
 
 The executables will be inside *bin* folder in the respective language's directory. 
 Source code can also be found in the respective langauge directories as well.
