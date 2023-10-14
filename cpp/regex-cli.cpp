@@ -146,10 +146,10 @@ void printHelp(string program) {
           "spelled correctly"
        << endl;
   cout << "\nEXAMPLES" << endl;
-  cout << "\t\t" << program << " whole ab?c{2} y n" << endl;
-  cout << "\t\t" << program << " once ab?c{2} y n" << endl;
-  cout << "\t\t" << program << " mULti ab?c{2} n y" << endl;
-  cout << "\t\t" << program << " multiPLE ab?c{2} y y" << endl;
+  cout << "\t\t" << program << " whole y n" << endl;
+  cout << "\t\t" << program << " once y n" << endl;
+  cout << "\t\t" << program << " mULti n y" << endl;
+  cout << "\t\t" << program << " multiPLE y y" << endl;
 }
 
 void whole_matching(regex pattern, string str, bool from_file, ifstream &file) {
