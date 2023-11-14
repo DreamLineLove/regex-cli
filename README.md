@@ -3,10 +3,9 @@ A simple command line tool to analyze strings using regular expressions.
 
 ## Contents
 As of right now, the tool is written only in C++. 
-I intend to write it in Go in the future.
+I intend to write it again in Go in the future.
 
-The executables will be inside *bin* folder in the respective language's directory. 
-Source code can also be found in the respective langauge directories as well.
+The executables are inside the *bin* directory. You can also build from source.
 ### Go
 ```
 regex-cli/
@@ -30,7 +29,7 @@ regex-cli/
 ```
     $ git clone https://github.com/DreamLineLove/regex-cli.git
 ```
-- Make up your mind about your preferred language and run the program:
+- Choose your preferred language and run the program:
 ```
     $ ./cpp/bin/regex-cli-cpp
 ```
@@ -38,4 +37,4 @@ or
 ```
     $ ./go/bin/regex-cli-go
 ```
-- When you run the program as above (without any flags), you will be greeted by helpful instructions.
+- Run the program as above (without any flags) and you will be greeted with helpful instructions.
