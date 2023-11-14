@@ -2,10 +2,11 @@
 A simple command line tool to analyze strings using regular expressions.
 
 ## Contents
-As of right now, the tool is written only in C++. 
+As of right now, the tool is written in C++. 
 I intend to write it again in Go in the future.
 
-The executables are inside the *bin* directory. You can also build from source.
+The executable is inside the *bin* directory. You can also build from source.
+<!--
 ### Go
 ```
 regex-cli/
@@ -14,6 +15,7 @@ regex-cli/
       bin/
         regex-cli-go
 ```
+--->
 ### C++
 ```
 regex-cli/
