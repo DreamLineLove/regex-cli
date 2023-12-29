@@ -1,5 +1,5 @@
 # regex-cli
-A simple command line regular expression tool written in multiple languages.
+A simple command-line regular expression tool written in multiple languages.
 
 ## Contents
 As of right now, the tool is written in C++ and Java.
