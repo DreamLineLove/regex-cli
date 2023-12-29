@@ -3,11 +3,9 @@ A simple command-line regular expression tool written in multiple languages.
 
 ## Contents
 As of right now, the tool is written in C++ and Java.
-I intend to write a version in Go in the future.
+In the future, I intend to write a version in Go.
 
-The executable(s) are inside the *bin* directory. You can also build from source.
-
-*Note:* Ensure that you have a Java runtime installed on your system to run the .class executable.
+The executable(s) are inside the *bin* directory. You can also build from source, given that you have the necessary toolchain. *Note:* Please ensure that you have a Java runtime installed on your system to run the .class executable.
 
 ### C++
 ```
@@ -35,7 +33,7 @@ regex-cli/
 ```
 $ git clone https://github.com/DreamLineLove/regex-cli.git
 ```
-- Make a decision on your preferred language and run the program:
+- Choose your preferred language and then simply run the program:
 ```
 $ ./cpp/bin/regex-cli-cpp
 ```
@@ -43,4 +41,4 @@ or
 ```
 $ java -cp java/bin/ RegexCLI
 ```
-- Run the program as above (without any flags) and you will be greeted with helpful instructions.
+- Simply run the program without any flags, as shown above, to see the available options.
