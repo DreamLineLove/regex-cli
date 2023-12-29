@@ -7,101 +7,115 @@ class RegexCLI {
 
     public static void main(String argv[]) {
 
-        String regex = argv[0];
-        String fName = argv[1];
+        if (argv.length == 2) {
+            String regex = argv[0];
+            String fName = argv[1];
 
-        Pattern p = Pattern.compile(regex);
-        Scanner sSc = new Scanner(System.in);
+            Pattern p = Pattern.compile(regex);
+            Scanner sSc = new Scanner(System.in);
 
-        System.out.print("\nMatch each word or each line in the file? \t\t\t(w or l): ");
-        Boolean matchWords = sSc.nextLine().trim().equals("w") ? true : false;
-        
-        Boolean countTotal = false;
-        if (matchWords) {
-            System.out.print("Count total matches or just an inline indicator is fine? \t(c or i): ");
-            countTotal = sSc.nextLine().trim().equals("c") ? true : false;
-        }
+            System.out.print("\nMatch each word or each line in the file? \t\t\t(w or l): ");
+            Boolean matchWords = sSc.nextLine().trim().equals("w") ? true : false;
 
-        sSc.close();
-        System.out.println("\n------");
+            Boolean countTotal = false;
+            if (matchWords) {
+                System.out.print("Count total matches or just an inline indicator is fine? \t(c or i): ");
+                countTotal = sSc.nextLine().trim().equals("c") ? true : false;
+            }
 
-        if (matchWords) {
-            if (countTotal) {
-                int outer = 0;
+            sSc.close();
+            System.out.println("\n------");
 
-                try {
-                    File f = new File(fName);
-                    Scanner sc = new Scanner(f);
+            if (matchWords) {
+                if (countTotal) {
+                    int outer = 0;
 
-                    while (sc.hasNextLine()) {
-                        int inner = 0;
-                        String line = sc.nextLine().trim();
-                        Matcher m = p.matcher(line);
+                    try {
+                        File f = new File(fName);
+                        Scanner sc = new Scanner(f);
 
-                        while (m.find()) {
-                            inner++;
+                        while (sc.hasNextLine()) {
+                            int inner = 0;
+                            String line = sc.nextLine().trim();
+                            Matcher m = p.matcher(line);
+
+                            while (m.find()) {
+                                inner++;
+                            }
+                            System.out.println("[" + inner + "]\t" + line);
+                            outer += inner;
                         }
-                        System.out.println("[" + inner + "]\t" + line);
-                        outer += inner;
+                        sc.close();
+                    } catch (FileNotFoundException e) {
+                        e.printStackTrace();
                     }
-                    sc.close();
-                } catch (FileNotFoundException e) {
-                    e.printStackTrace();
-                }
 
-                System.out.println("------");
-                System.out.println("Total[" + outer + "]");
+                    System.out.println("------");
+                    System.out.println("Total[" + outer + "]");
+                } else {
+                    try {
+                        File f = new File(fName);
+                        Scanner sc = new Scanner(f);
+
+                        while (sc.hasNextLine()) {
+                            int count = 0;
+                            String line = sc.nextLine().trim();
+                            Matcher m = p.matcher(line);
+
+                            while (m.find()) {
+                                count++;
+                            }
+                            System.out.println("[" + count + "]\t" + line);
+
+                        }
+                        sc.close();
+                    } catch (FileNotFoundException e) {
+                        e.printStackTrace();
+                    }
+                    System.out.println("------");
+                }
             } else {
+                int count = 0;
+
                 try {
                     File f = new File(fName);
                     Scanner sc = new Scanner(f);
 
                     while (sc.hasNextLine()) {
-                        int count = 0;
                         String line = sc.nextLine().trim();
                         Matcher m = p.matcher(line);
+                        Boolean b = m.matches();
 
-                        while (m.find()) {
+                        if (b) {
+                            System.out.println("✓\t" + line);
                             count++;
+                        } else {
+                            System.out.println(" \t" + line);
                         }
-                        System.out.println("[" + count + "]\t" + line);
-
                     }
                     sc.close();
                 } catch (FileNotFoundException e) {
                     e.printStackTrace();
                 }
+
                 System.out.println("------");
+                System.out.println("Total[" + count + "]");
             }
+
+            System.out.println();
         } else {
-            int count = 0;
+            System.out.println("Regular Expressions Command Line Tool");
+            System.out.println("          (written in Java)");
+            System.out.println("          -----------------\n");
+            
+            System.out.println("The following 2 arguments are required:");
+            System.out.println("\tregex\tThe regular expression to use");
+            System.out.println("\tfName\tA filepath. The strings to be matched with the regex pattern will be extracted from this file.\n");
 
-            try {
-                File f = new File(fName);
-                Scanner sc = new Scanner(f);
-
-                while (sc.hasNextLine()) {
-                    String line = sc.nextLine().trim();
-                    Matcher m = p.matcher(line);
-                    Boolean b = m.matches();
-
-                    if (b) {
-                        System.out.println("✓\t" + line);
-                        count++;
-                    } else {
-                        System.out.println(" \t" + line);
-                    }
-                }
-                sc.close();
-            } catch (FileNotFoundException e) {
-                e.printStackTrace();
-            }
-
-            System.out.println("------");
-            System.out.println("Total[" + count + "]");
+            System.out.println("For example:");
+            System.out.println("\tjava -cp java/bin/ RegexCLI javaIsCool! ../samples/t1.txt");
         }
 
-        System.out.println();
 
     }
 
