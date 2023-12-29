@@ -71,6 +71,7 @@ class RegexCLI {
                 } catch (FileNotFoundException e) {
                     e.printStackTrace();
                 }
+                System.out.println();
             }
         } else {
             int count = 0;
@@ -85,10 +86,10 @@ class RegexCLI {
                     Boolean b = m.matches();
 
                     if (b) {
-                        System.out.println("[m]\t" + line);
+                        System.out.println("✓\t" + line);
                         count++;
                     } else {
-                        System.out.println(line);
+                        System.out.println("✖\t" + line);
                     }
                 }
                 sc.close();
