@@ -13,12 +13,12 @@ class RegexCLI {
         Pattern p = Pattern.compile(regex);
         Scanner sSc = new Scanner(System.in);
 
-        System.out.print("\nMatch each word or each line in the file? (w or l)...");
+        System.out.print("\nMatch each word or each line in the file? (w or l): ");
         Boolean matchWords = sSc.nextLine().trim().equals("w") ? true : false;
         
         Boolean countTotal = false;
         if (matchWords) {
-            System.out.print("Count total matches or just an inline indicator is fine? (c or i)...");
+            System.out.print("Count total matches or just an inline indicator is fine? (c or i): ");
             countTotal = sSc.nextLine().trim().equals("c") ? true : false;
         }
 
@@ -100,6 +100,7 @@ class RegexCLI {
             System.out.println("Total = " + count);
         }
 
+        System.out.println();
 
     }
 
