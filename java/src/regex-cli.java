@@ -13,7 +13,7 @@ class RegexCLI {
         Pattern p = Pattern.compile(regex);
         Scanner sSc = new Scanner(System.in);
 
-        System.out.print("Match each word or each line in the file? (w or l)...");
+        System.out.print("\nMatch each word or each line in the file? (w or l)...");
         Boolean matchWords = sSc.nextLine().trim().equals("w") ? true : false;
         
         Boolean countTotal = false;
@@ -23,7 +23,7 @@ class RegexCLI {
         }
 
         sSc.close();
-        System.out.println("------");
+        System.out.println("\n------");
 
         if (matchWords) {
             if (countTotal) {
