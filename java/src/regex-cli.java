@@ -50,7 +50,7 @@ class RegexCLI {
                 }
 
                 System.out.println("------");
-                System.out.println("Total = " + outer);
+                System.out.println("Total=" + outer);
             } else {
                 try {
                     File f = new File(fName);
@@ -98,7 +98,7 @@ class RegexCLI {
             }
 
             System.out.println("------");
-            System.out.println("Total = " + count);
+            System.out.println("Total=" + count);
         }
 
         System.out.println();
