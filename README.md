@@ -6,37 +6,39 @@ As of right now, the tool is written in C++.
 I intend to write it again in Go in the future.
 
 The executable is inside the *bin* directory. You can also build from source.
-<!--
-### Go
-```
-regex-cli/
-    go/
-      regex-cli.go
-      bin/
-        regex-cli-go
-```
---->
+
 ### C++
 ```
 regex-cli/
     cpp/
-      regex-cli.cpp
-      bin/
-        regex-cli-cpp
+        src/
+            regex-cli.cpp
+        bin/
+            regex-cli-cpp
+```
+
+### Java
+```
+regex-cli/
+    java/
+        src/
+            regex-cli.java
+        bin/
+            RegexCLI.class
 ```
 
 ## Usage
- 
+
 - First, clone the repository to your local machine:
 ```
-    $ git clone https://github.com/DreamLineLove/regex-cli.git
+$ git clone https://github.com/DreamLineLove/regex-cli.git
 ```
-- Choose your preferred language and run the program:
+- Make a decision on your preferred language and run the program:
 ```
-    $ ./cpp/bin/regex-cli-cpp
+$ ./cpp/bin/regex-cli-cpp
 ```
 or
 ```
-    $ ./go/bin/regex-cli-go
+$ java -cp java/bin/ RegexCLI
 ```
 - Run the program as above (without any flags) and you will be greeted with helpful instructions.
