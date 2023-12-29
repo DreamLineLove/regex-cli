@@ -23,6 +23,7 @@ class RegexCLI {
         }
 
         sSc.close();
+        System.out.println();
 
         if (matchWords) {
             if (countTotal) {
