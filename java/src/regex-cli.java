@@ -41,7 +41,7 @@ class RegexCLI {
                         while (m.find()) {
                             inner++;
                         }
-                        System.out.println(line + " [" + inner + "]");
+                        System.out.println("[" + inner + "]\t" + line);
                         outer += inner;
                     }
                     sc.close();
@@ -64,7 +64,7 @@ class RegexCLI {
                         while (m.find()) {
                             count++;
                         }
-                        System.out.println(line + " [" + count + "]");
+                        System.out.println("[" + count + "]\t" + line);
 
                     }
                     sc.close();
@@ -85,7 +85,7 @@ class RegexCLI {
                     Boolean b = m.matches();
 
                     if (b) {
-                        System.out.println(line + " [matches]");
+                        System.out.println("[m]\t" + line);
                         count++;
                     } else {
                         System.out.println(line);
