@@ -13,13 +13,13 @@ class RegexCLI {
         Pattern p = Pattern.compile(regex);
         Scanner sSc = new Scanner(System.in);
 
-        System.out.print("Do you want to match words or each line in the file? (y or n)...");
-        Boolean matchWords = sSc.nextLine().trim().equals("y") ? true : false;
+        System.out.print("Match each word or each line in the file? (w or l)...");
+        Boolean matchWords = sSc.nextLine().trim().equals("w") ? true : false;
         
         Boolean countTotal = false;
         if (matchWords) {
-            System.out.print("Do you want to count total matches or just an inline indicator is fine? (y or n)...");
-            countTotal = sSc.nextLine().trim().equals("y") ? true : false;
+            System.out.print("Count total matches or just an inline indicator is fine? (c or i)...");
+            countTotal = sSc.nextLine().trim().equals("c") ? true : false;
         }
 
         sSc.close();
