@@ -1,11 +1,12 @@
 # regex-cli
-A simple command line tool to analyze strings using regular expressions.
+A simple command line regular expression tool written in multiple languages.
 
 ## Contents
-As of right now, the tool is written in C++. 
-I intend to write it again in Go in the future.
+As of right now, the tool is written in C++ and Java.
+I intend to write a version in Go in the future.
 
-The executable is inside the *bin* directory. You can also build from source.
+The executable(s) are inside the *bin* directory. You can also build from source.
+*Note* You need to install the Java toolchain to run the .class executable.
 
 ### C++
 ```
