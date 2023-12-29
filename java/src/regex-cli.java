@@ -14,12 +14,12 @@ class RegexCLI {
         Scanner sSc = new Scanner(System.in);
 
         System.out.print("Do you want to match words or each line in the file? (y or n)...");
-        Boolean matchWords = sSc.nextLine().trim() == "y" ? true : false;
+        Boolean matchWords = sSc.nextLine().trim().equals("y") ? true : false;
         
         Boolean countTotal = false;
         if (matchWords) {
             System.out.print("Do you want to count total matches or just an inline indicator is fine? (y or n)...");
-            countTotal = sSc.nextLine().trim() == "y" ? true : false;
+            countTotal = sSc.nextLine().trim().equals("y") ? true : false;
         }
 
         sSc.close();
@@ -48,7 +48,7 @@ class RegexCLI {
                     e.printStackTrace();
                 }
 
-                System.out.println("Total =" + outer);
+                System.out.println("Total = " + outer);
             } else {
                 try {
                     File f = new File(fName);
