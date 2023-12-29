@@ -117,7 +117,6 @@ class RegexCLI {
             System.out.println("\t                            [..regex..] [.....fName.....]");
         }
 
-
     }
 
 }
