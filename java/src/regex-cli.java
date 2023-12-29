@@ -114,6 +114,7 @@ class RegexCLI {
 
             System.out.println("For example:");
             System.out.println("\tjava -cp java/bin/ RegexCLI javaIsCool! ../samples/t1.txt");
+            System.out.println("\t                            [..regex..] [.....fName.....]");
         }
 
 
