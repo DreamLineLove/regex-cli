@@ -6,7 +6,7 @@ As of right now, the tool is written in C++ and Java.
 I intend to write a version in Go in the future.
 
 The executable(s) are inside the *bin* directory. You can also build from source.
-*Note* You need to install the Java toolchain to run the .class executable.
+*Note:* You need to install the Java toolchain to run the .class executable.
 
 ### C++
 ```
