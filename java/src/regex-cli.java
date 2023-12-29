@@ -23,7 +23,7 @@ class RegexCLI {
         }
 
         sSc.close();
-        System.out.println();
+        System.out.println("------");
 
         if (matchWords) {
             if (countTotal) {
@@ -49,6 +49,7 @@ class RegexCLI {
                     e.printStackTrace();
                 }
 
+                System.out.println("------");
                 System.out.println("Total = " + outer);
             } else {
                 try {
@@ -95,6 +96,7 @@ class RegexCLI {
                 e.printStackTrace();
             }
 
+            System.out.println("------");
             System.out.println("Total = " + count);
         }
 
