@@ -104,17 +104,16 @@ class RegexCLI {
 
             System.out.println();
         } else {
-            System.out.println("Regular Expressions Command Line Tool");
-            System.out.println("          (written in Java)");
-            System.out.println("          -----------------\n");
+            System.out.println("Regular Expressions Command-line Tool");
+            System.out.println("-------------Java Edition------------\n");
             
             System.out.println("The following 2 arguments are required:");
-            System.out.println("\tregex\tThe regular expression to use");
-            System.out.println("\tfName\tA filepath. The strings to be matched with the regex pattern will be extracted from this file.\n");
+            System.out.println("\tregex\tThe regular expression to be used.");
+            System.out.println("\tfName\tA filepath. Strings extracted line by line\n\t\tfrom this file will be matched with the regex\n\t\tpattern either line by line or on an individual\n\t\tword basis.\n");
 
             System.out.println("For example:");
             System.out.println("\tjava -cp java/bin/ RegexCLI javaIsCool! ../samples/t1.txt");
-            System.out.println("\t                            [..regex..] [.....fName.....]");
+            System.out.println("\t                            [..regex..] [.....fName.....]\n");
         }
 
     }
