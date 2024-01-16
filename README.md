@@ -11,22 +11,24 @@ The executable(s) are inside the *bin* directory. You can also build from source
 
 ### C++
 ```
-regex-cli/
-    cpp/
-        src/
-            regex-cli.cpp
-        bin/
-            regex-cli-cpp
+regex-cli
+├── cpp
+│   ├── bin
+│   │   └── regex-cli-app
+│   └── src
+│       └── regex-cli.cpp
+└── README.md
 ```
 
 ### Java
 ```
-regex-cli/
-    java/
-        src/
-            regex-cli.java
-        bin/
-            RegexCLI.class
+regex-cli
+├── java
+│   ├── bin
+│   │   └── RegexCLI.class
+│   └── src
+│       └── regex-cli.java
+└── README.md
 ```
 
 ## Usage
