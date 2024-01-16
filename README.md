@@ -1,7 +1,7 @@
 # regex-cli
 A simple command-line regular expression tool written in multiple languages.
 
-## Contents
+## Note
 As of right now, the tool is written in C++ and Java.
 In the future, I intend to write a version in Go.
 
@@ -9,7 +9,7 @@ The executable(s) are inside the *bin* directory. You can also build from source
 
 *Note:* Ensure that you have a Java runtime installed on your system to run the .class executable.
 
-### C++
+### Content
 ```
 regex-cli
 ├── cpp
