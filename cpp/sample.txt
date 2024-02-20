@@ -1,0 +1,9 @@
+foo bar
+bar foo
+foo foo
+bar bar 
+bar bar bar
+foo bar foo
+bar bar
+foo foo bar
+foo foo foo
