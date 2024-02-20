@@ -5,44 +5,40 @@ A simple command-line regular expression tool written in multiple languages.
 As of right now, the tool is written in C++ and Java.
 In the future, I intend to write a version in Go.
 
-The executable(s) are inside the *bin* directory. You can also build from source, given that you have the necessary toolchain. 
+The executable(s) are inside the *bin* directory. You can also build from source, given that you have the necessary toolchain(s). 
 
-*Note:* Ensure that you have a Java runtime installed on your system to run the .class executable.
+*Note:* Ensure that you have a Java runtime installed on your system in order to run .class executable(s).
 
-### Content
+### Contents
 ```
-regex-cli
+regex-cli/
 ├── cpp
 │   ├── bin
-│   │   └── regex-cli-app
-│   └── src
-│       └── regex-cli.cpp
-└── README.md
-```
-
-### Java
-```
-regex-cli
+│   ├── src
+│   └── README.md
 ├── java
 │   ├── bin
-│   │   └── RegexCLI.class
-│   └── src
-│       └── regex-cli.java
+│   ├── legacy
+│   ├── src
+│   └── README.md
+├── SPECIFICATION.md
 └── README.md
 ```
 
 ## Usage
 
-- First, clone the repository to your local machine:
+##### First, clone the repository onto your local machine:
 ```
 $ git clone https://github.com/DreamLineLove/regex-cli.git
 ```
-- Choose your preferred language and then simply run the program:
+##### Choose your preferred language and cd into the language directory:
 ```
-$ ./cpp/bin/regex-cli-cpp
+$ cd cpp/
 ```
 or
 ```
-$ java -cp java/bin/ RegexCLI
+$ cd java/
 ```
-- Simply run the program without any flags, as shown above, to see the available options.
+##### Inside the directory, you will find a README file with further instructions on how to run the program in that language.
+Finally, if you are interested in the various considerations made during development, please look into *SPECIFICATION.md*.
+##### Thanks for visiting this little code repo, cheers!
