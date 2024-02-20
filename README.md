@@ -7,7 +7,7 @@ In the future, I intend to write a version in Go.
 
 The executable(s) are inside the *bin* directory. You can also build from source, given that you have the necessary toolchain(s). 
 
-*Note:* Ensure that you have a Java runtime installed on your system in order to run .class executable(s).
+*Note:* Ensure that you have a Java runtime installed on your system in order to run Java's .class (bytecode) files.
 
 ### Contents
 ```
