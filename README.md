@@ -27,11 +27,11 @@ regex-cli/
 
 ## Usage
 
-##### First, clone the repository onto your local machine:
+#### First, clone the repository onto your local machine:
 ```
 $ git clone https://github.com/DreamLineLove/regex-cli.git
 ```
-##### Choose your preferred language and cd into the language directory:
+#### Choose your preferred language and cd into the language directory:
 ```
 $ cd cpp/
 ```
@@ -39,6 +39,7 @@ or
 ```
 $ cd java/
 ```
-##### Inside the directory, you will find a README file with further instructions on how to run the program in that language.
-Finally, if you are interested in the various considerations made during development, please look into *SPECIFICATION.md*.
-##### Thanks for visiting this little code repo, cheers!
+#### Inside the directory, you will find a README file with further instructions on how to run the program in that language.
+Finally, if you are interested in the various considerations made during development, please look into <a href="https://github.com/DreamLineLove/regex-cli/blob/main/SPECIFICATION.md">SPECIFICATION.md</a>.
+
+**Thanks for visiting this little code repo, cheers!**
