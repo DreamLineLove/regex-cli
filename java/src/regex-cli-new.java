@@ -1,16 +1,72 @@
+import java.util.Scanner;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.regex.Pattern;
+import java.util.regex.Matcher;
+
+class Counter {
+    static private int count = 0;
+
+    static int getCount() {
+        return count;
+    }
+
+    static void increment() {
+        count++;
+    }
+}
+
 interface Option {
-    int matches(Counter ctr, String line);
+    void matches(String line, Pattern p);
 }
 
 class RegexEngine {
-    private Option op;
+    private static Option op;
 
-    void setOption(Option op) {
-        this.op = op;
+    static void setOption(Option option) {
+        op = option;
     }
 
-    int matches(Counter ctr, String line) {
-        op.matches(ctr, line);
+    static void matches(String line, Pattern p) {
+        op.matches(line, p);
+    }
+}
+
+class Default implements Option {
+    public void matches(String line, Pattern p) {
+        Matcher m = p.matcher(line);
+        if (m.matches()) Counter.increment();
+    }
+}
+
+class LineMode implements Option {
+    public void matches(String line, Pattern p) {
+        Matcher m = p.matcher(line);
+        while (m.find()) Counter.increment();
+    }
+}
+
+class Verbose implements Option {
+    public void matches(String line, Pattern p) {
+        Matcher m = p.matcher(line);
+        int inner = 0;
+        if (m.matches()) {
+            inner = 1;
+            Counter.increment();
+        }
+        System.out.println("[" + inner + "]\t" + line + "\n");
+    }
+}
+
+class VerboseLineMode implements Option {
+    public void matches(String line, Pattern p) {
+        Matcher m = p.matcher(line);
+        int inner = 0;
+        while (m.find()) {
+            inner += 1;
+            Counter.increment();
+        }
+        System.out.println("[" + inner + "]\t" + line + "\n");
     }
 }
 
@@ -32,24 +88,50 @@ class RegexCLI {
                 verbose = true;
             } else if (arg.equals("--line-mode")) {
                 line_mode = true;
-            } else if (arg.startsWith("--pattern=\"") && arg.endsWith("\"")) {
+            } else if (arg.startsWith("--pattern=")) {
                 String[] parts = arg.split("=");
                 String quotedPart = parts[1];
                 pattern = quotedPart.substring(0, quotedPart.length());
-            } else {
+            } else if (arg.startsWith("--file-path")) {
                 String[] parts = arg.split("=");
                 String quotePart = parts[1];
                 file_path = quotePart.substring(0, quotePart.length());
             }
-
-            System.out.println("verbose = ", verbose);
-            System.out.println("line-mode = ", line-mode);
-            System.out.println("pattern = ", pattern);
-            System.out.println("file-path = ", file_path);
         }
+        // FOR DEBUGGING
+        // System.out.println("verbose = " + verbose);
+        // System.out.println("line-mode = " + line_mode);
+        // System.out.println("pattern = " + pattern);
+        // System.out.println("file-path = " + file_path);
     }
 
     public static void main(String[] args) {
         parseArguments(args);
+
+        Pattern p = Pattern.compile(pattern);
+        File f = new File(file_path);
+
+        try {
+            Scanner sc = new Scanner(f);
+
+            if (verbose && line_mode) RegexEngine.setOption(new VerboseLineMode());
+            else if (verbose) RegexEngine.setOption(new Verbose());
+            else if (line_mode) RegexEngine.setOption(new LineMode());
+            else RegexEngine.setOption(new Default());
+
+            while (sc.hasNextLine()) {
+                String line = sc.nextLine();
+                RegexEngine.matches(line, p);
+            }
+
+            sc.close();
+        } catch (FileNotFoundException e) {
+            // FOR DEBUGGING
+            // e.printStackTrace();
+            System.out.println("File not found!");
+            System.exit(1);
+        }
+
+        System.out.println("\tNumber of matches: " + Counter.getCount());
     }
 }
