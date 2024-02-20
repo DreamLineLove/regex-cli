@@ -8,19 +8,19 @@ subsequent implementations will fulfill the same requirements.
 ## Options
 
 #### -v, --verbose
-When *--verbose=true* or *-v* flag is used, the program should output each line 
+When *--verbose* or *-v* flag is used, the program should output each line 
 and the number of matches corresponding to that line. When the *-v* flag is absent
 or *--verbose* is set to false, the program should simply output the total number.
 
-#### -l, --line
-When *--line=true* or *-l* flag is used, the program should treat a line as the
+#### -l, --line-mode
+When *--line-mode* or *-l* flag is used, the program should treat a line as the
 smallest input unit against which the pattern will be matched. Otherwise, individual 
 words should be treated as the smallest unit.
 
-#### "pattern"
+#### pattern="pattern"
 *"pattern"* is a command-line argument used to provide the program with the regular
 expression pattern against which input sequences will be matched.
 
-#### "file-path"
+#### file-path="relative-file-path"
 *"file-path"* is a command-line argument used to provide the program with the relative
 file-path of the file to be used as the input. Each line will be extracted from said file.
