@@ -35,14 +35,15 @@ class RegexEngine {
 class Default implements Option {
     public void matches(String line, Pattern p) {
         Matcher m = p.matcher(line);
-        if (m.matches()) Counter.increment();
+        while (m.find()) Counter.increment();
+        
     }
 }
 
 class LineMode implements Option {
     public void matches(String line, Pattern p) {
         Matcher m = p.matcher(line);
-        while (m.find()) Counter.increment();
+        if (m.matches()) Counter.increment();
     }
 }
 
@@ -50,8 +51,8 @@ class Verbose implements Option {
     public void matches(String line, Pattern p) {
         Matcher m = p.matcher(line);
         int inner = 0;
-        if (m.matches()) {
-            inner = 1;
+        while (m.find()) {
+            inner += 1;
             Counter.increment();
         }
         System.out.println("[" + inner + "]\t" + line + "\n");
@@ -62,8 +63,8 @@ class VerboseLineMode implements Option {
     public void matches(String line, Pattern p) {
         Matcher m = p.matcher(line);
         int inner = 0;
-        while (m.find()) {
-            inner += 1;
+        if (m.matches()) {
+            inner = 1;
             Counter.increment();
         }
         System.out.println("[" + inner + "]\t" + line + "\n");
