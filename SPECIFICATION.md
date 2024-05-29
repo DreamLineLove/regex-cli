@@ -17,15 +17,15 @@ When *--line-mode* or *-l* flag is used, the program should treat a line as the
 smallest input unit against which the pattern will be matched. Otherwise, individual 
 words should be treated as the smallest unit.
 
-#### pattern="pattern"
+#### --pattern="pattern"
 *"pattern"* is a command-line argument used to provide the program with the regular
 expression pattern against which input sequences will be matched.
 
-#### file-path="relative-file-path"
+#### --file-path="relative-file-path"
 *"file-path"* is a command-line argument used to provide the program with the relative
 file-path of the file to be used as the input. Each line will be extracted from said file.
 
-## Future ideas
+## Ideas to implement later
 - Accept multiple file-paths and operate on each file on a different thread (concurrency)
 - Build a web service (with or without a user interface) that will achieve the same 
 functionality 
