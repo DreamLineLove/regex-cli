@@ -39,7 +39,6 @@ or
 ```
 $ cd java/
 ```
-#### Once you are in a language directory, you will find a README file with further instructions on how to run the program written in that language.
-Finally, if you are interested in the various considerations made during development, please look into <a href="https://github.com/DreamLineLove/regex-cli/blob/main/SPECIFICATION.md">SPECIFICATION.md</a>.
+If you are curious about the various considerations made during the development of the Java version, please look into <a href="https://github.com/DreamLineLove/regex-cli/blob/main/SPECIFICATION.md">SPECIFICATION.md</a>.
 
 **Thanks for visiting this little code repo, cheers!**
