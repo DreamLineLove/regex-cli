@@ -5,9 +5,9 @@ A simple command-line regular expression tool written in multiple languages.
 As of right now, the tool is written in C++ and Java.
 In the future, I intend to write a version in Go.
 
-The executable(s) are inside the *bin* directory. You can also build from source, given that you have the necessary toolchain(s). 
+The executable(s) for linux are inside the *bin* directory. For other Operating Systems, please build from source using the relevant toolchain(s). 
 
-*Note:* Ensure that you have a Java runtime installed on your system in order to run Java's .class (bytecode) files.
+*Note:* Also ensure that you have a Java runtime installed in order to run Java's .class (bytecode) files.
 
 ### Contents
 ```
