@@ -5,8 +5,7 @@ A simple command-line regular expression tool written in multiple languages.
 As of right now, the tool is written in C++ and Java.
 In the future, I intend to write a version in Go.
 
-#### Notes
-- The (c++) executable for Linux is inside the *bin* directory. For other Operating Systems, please build from source using the relevant toolchain(s).  
+- The executable (C++) for linux is inside the *bin* directory. For other Operating Systems, please build from source using the relevant toolchain(s).  
 - Ensure that you have a Java runtime installed in order to run Java bytecode.
 
 ### Contents
@@ -43,8 +42,10 @@ $ java -cp java/bin/ RegexCLI --file-path="java/sample.txt" --pattern="bar" -l
 $ java -cp java/bin/ RegexCLI --file-path="java/sample.txt" --pattern="foo" -vl
 $ java -cp java/bin/ RegexCLI --file-path="java/sample.txt" --pattern="bar" -vl
 ```
-#### Please be sure to mind the "relative" path of the file and where you are running the commands!
+**Please be sure to mind the "relative" path of the file and where you are running the commands!**
+
+## End Notes
 
 If you are curious about the various considerations made during the development of the Java version, please look into <a href="https://github.com/DreamLineLove/regex-cli/blob/main/SPECIFICATION.md">SPECIFICATION.md</a>.
 
-**Thanks for visiting this little code repo, cheers!**
+Thanks for visiting my little code repository!
